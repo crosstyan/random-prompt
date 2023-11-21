@@ -1,0 +1,13 @@
+{
+  "name": "random_prompt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "random": "node index.js"
+  },
+  "type":"module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
