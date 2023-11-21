@@ -4,4 +4,6 @@ I have no idea how this shit works.
 
 ```bash
 npm run random
+# nsfw
+npm run random t
 ```

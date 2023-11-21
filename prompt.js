@@ -19,14 +19,14 @@ function rr(e) {
 /**
  * `sr` in minified code
  * 
- * @param {boolean} e a boolean value that I have no idea what it does
+ * @param {boolean} e if true, NSFW tags are included
  */
 export default function randomPrompt(e) {
   var t = [],
     n = !1
   e &&
     (n = !0)
-  var i = ar([[1,
+  var i = getWeightedChoice([[1,
     70],
   [
     2,
@@ -40,7 +40,7 @@ export default function randomPrompt(e) {
     0,
     5
   ]], t)
-  if (n && (i = ar([[1,
+  if (n && (i = getWeightedChoice([[1,
     35],
   [
     2,
@@ -52,9 +52,9 @@ export default function randomPrompt(e) {
   ]], t)), 0 === i) {
     t.push('no humans'),
       Math.random() < 0.3 &&
-      t.push(ar(ji, t)),
-      t.push(ar(yi, t))
-    for (var r = ar([[2,
+      t.push(getWeightedChoice(ji, t)),
+      t.push(getWeightedChoice(yi, t))
+    for (var r = getWeightedChoice([[2,
       15],
     [
       3,
@@ -67,8 +67,8 @@ export default function randomPrompt(e) {
     [
       5,
       5
-    ]], t), a = 0; a < r; a++) t.push(ar(Xi, t))
-    var o = ar([[0,
+    ]], t), a = 0; a < r; a++) t.push(getWeightedChoice(Xi, t))
+    var o = getWeightedChoice([[0,
       15],
     [
       1,
@@ -92,13 +92,13 @@ export default function randomPrompt(e) {
     ]], t);
     (o -= i) < 0 &&
       (o = 0)
-    for (var s = 0; s < o; s++) t.push(ar(Gi, t))
+    for (var s = 0; s < o; s++) t.push(getWeightedChoice(Gi, t))
     return t.join(', ')
   }
   Math.random() < 0.3 &&
-    t.push(ar(ji, t))
+    t.push(getWeightedChoice(ji, t))
   for (var c = 0, d = 0, u = 0, h = 0; h < i; h++) {
-    ar([['m',
+    getWeightedChoice([['m',
       30],
     [
       'f',
@@ -108,7 +108,7 @@ export default function randomPrompt(e) {
       'o',
       10
     ]], t)
-    switch (ar([['m',
+    switch (getWeightedChoice([['m',
       30],
     [
       'f',
@@ -176,27 +176,27 @@ export default function randomPrompt(e) {
         t.push(ir.fwf),
         f &&
         t.push(ir.fwm),
-        t.push(ar(v, t)),
+        t.push(getWeightedChoice(v, t)),
         Math.random() < 0.6 &&
-        t.push(ar(ir.sMod, t))
+        t.push(getWeightedChoice(ir.sMod, t))
     }
     Math.random() < 0.4 &&
-      t.push(ar(ir.sActMod, t)),
+      t.push(getWeightedChoice(ir.sActMod, t)),
       Math.random() < 0.05 &&
-      t.push(ar(ir.bd, t)),
+      t.push(getWeightedChoice(ir.bd, t)),
       Math.random() < 0.05 &&
-      t.push(ar(ir.sT, t)),
+      t.push(getWeightedChoice(ir.sT, t)),
       t.unshift(ir.nw)
   }
   if (Math.random() < 0.8) {
-    var x = ar(bi, t)
-    if (t.push(x), 'scenery' === x && Math.random() < 0.5) for (var y = rr(3, 1), b = 0; b < y; b++) t.push(ar(Xi, t))
+    var x = getWeightedChoice(bi, t)
+    if (t.push(x), 'scenery' === x && Math.random() < 0.5) for (var y = rr(3, 1), b = 0; b < y; b++) t.push(getWeightedChoice(Xi, t))
   }
   Math.random() < 0.3 &&
-    t.push(ar(vi, t)),
+    t.push(getWeightedChoice(vi, t)),
     Math.random() < 0.7 &&
     !m &&
-    (p = ar(wi, t)) &&
+    (p = getWeightedChoice(wi, t)) &&
     t.push(p)
   for (var w = 0; w < c; w++) {
     var j,
@@ -221,13 +221,13 @@ export default function randomPrompt(e) {
     var M = rr(4)
     2 === i &&
       (M = rr(3))
-    for (var P = 0; P < M; P++) t.push(ar(Gi, t))
+    for (var P = 0; P < M; P++) t.push(getWeightedChoice(Gi, t))
   }
-  if (Math.random() < 0.25) for (var D = rr(3, 1), L = 0; L < D; L++) t.push(ar(Ki, t))
+  if (Math.random() < 0.25) for (var D = rr(3, 1), L = 0; L < D; L++) t.push(getWeightedChoice(Ki, t))
   Math.random() < 0.2 &&
-    t.push(ar(_i, t)),
+    t.push(getWeightedChoice(_i, t)),
     Math.random() < 0.1 &&
-    t.push(ar(xi, t))
+    t.push(getWeightedChoice(xi, t))
   var T = new Set(t.join(', ').split(', '))
   t = [...T]
   for (var E = 0; E < t.length; E++) Math.random() < 0.02 &&
@@ -235,8 +235,10 @@ export default function randomPrompt(e) {
   return t.join(', ')
 }
 
-// getWeightedChoice
-function ar(e, t) {
+/**
+ * `ar` in minified code
+ */
+function getWeightedChoice(e, t) {
   var n = e.filter(
     (
       function (e) {
@@ -295,36 +297,36 @@ function ar(e, t) {
 function or(e, t, n, i) {
   var r = []
   Math.random() < 0.1 &&
-    r.push(ar(ki, r))
+    r.push(getWeightedChoice(ki, r))
   var lr = new Set(['mermaid', 'centaur', 'lamia'])
   var a = r.some((function (e) {
     return lr.has(e)
   }))
   Math.random() < 0.4 &&
-    r.push(ar(Si, r)),
+    r.push(getWeightedChoice(Si, r)),
     Math.random() < 0.8 &&
-    r.push(ar(Qi, r)),
+    r.push(getWeightedChoice(Qi, r)),
     Math.random() < 0.1 &&
-    r.push(ar(Ii, r)),
+    r.push(getWeightedChoice(Ii, r)),
     Math.random() < 0.2 &&
-    r.push(ar(Ci, r)),
+    r.push(getWeightedChoice(Ci, r)),
     Math.random() < 0.8 &&
-    r.push(ar(Zi, r)),
+    r.push(getWeightedChoice(Zi, r)),
     Math.random() < 0.5 &&
-    r.push(ar(Mi, r)),
+    r.push(getWeightedChoice(Mi, r)),
     Math.random() < 0.7 &&
-    r.push(ar($i, r)),
+    r.push(getWeightedChoice($i, r)),
     Math.random() < 0.1 &&
-    r.push(ar(er, r), ar($i, r)),
+    r.push(getWeightedChoice(er, r), getWeightedChoice($i, r)),
     Math.random() < 0.1 &&
-    r.push(ar(Pi, r)),
+    r.push(getWeightedChoice(Pi, r)),
     Math.random() < 0.2 &&
-    r.push(ar(Di, r)),
+    r.push(getWeightedChoice(Di, r)),
     e.startsWith('f') &&
     Math.random() < 0.5 &&
-    r.push(ar(Li, r))
+    r.push(getWeightedChoice(Li, r))
   var o = 0
-  o = ar(
+  o = getWeightedChoice(
     1 === i ? [
       [0,
         10],
@@ -361,10 +363,10 @@ function or(e, t, n, i) {
     ],
     r
   )
-  for (var s = 0; s < o; s++) r.push(ar(Ti, r))
-  Math.random() < 0.2 ? (r.push(ar(Ei, r)), Math.random() < 0.2 && r.push(ar(Ri, r))) : Math.random() < 0.3 &&
-    r.push(ar(Ai, r))
-  var c = ar(
+  for (var s = 0; s < o; s++) r.push(getWeightedChoice(Ti, r))
+  Math.random() < 0.2 ? (r.push(getWeightedChoice(Ei, r)), Math.random() < 0.2 && r.push(getWeightedChoice(Ri, r))) : Math.random() < 0.3 &&
+    r.push(getWeightedChoice(Ai, r))
+  var c = getWeightedChoice(
     [['uniform',
       10],
     [
@@ -382,7 +384,7 @@ function or(e, t, n, i) {
     r
   )
   if (n && Math.random() < 0.9) {
-    switch (ar([['n',
+    switch (getWeightedChoice([['n',
       15],
     [
       'u',
@@ -393,77 +395,77 @@ function or(e, t, n, i) {
       5
     ]], r)) {
       case 'n':
-        r.push(ar(ir.n, r))
+        r.push(getWeightedChoice(ir.n, r))
         break
       case 'u':
-        r.push(ar(ir.u, r)),
+        r.push(getWeightedChoice(ir.u, r)),
           Math.random() < 0.5 &&
           (c = void 0)
         break
       case 'nk':
-        r.push(ar(ir.nk, r)),
+        r.push(getWeightedChoice(ir.nk, r)),
           c = void 0
     }
     'portrait' !== t &&
       'upper body' !== t &&
       (
         'f' === e &&
-          Math.random() < 0.8 ? r.push(ar(ir.p, r)) : 'm' === e &&
-            Math.random() < 0.8 ? r.push(ar(ir.mp, r)) : 'fu' === e &&
+          Math.random() < 0.8 ? r.push(getWeightedChoice(ir.p, r)) : 'm' === e &&
+            Math.random() < 0.8 ? r.push(getWeightedChoice(ir.mp, r)) : 'fu' === e &&
             Math.random() < 1 &&
-        (r.push(ar(ir.mp, r)), Math.random() < 0.5 && r.push(ar(ir.p, r)))
+        (r.push(getWeightedChoice(ir.mp, r)), Math.random() < 0.5 && r.push(getWeightedChoice(ir.p, r)))
       )
   }
   switch (c) {
     case 'uniform':
-      r.push(ar(Yi, r))
+      r.push(getWeightedChoice(Yi, r))
       break
     case 'swimsuit':
-      r.push(ar(Bi, r))
+      r.push(getWeightedChoice(Bi, r))
       break
     case 'bodysuit':
-      r.push(ar(Vi, r))
+      r.push(getWeightedChoice(Vi, r))
       break
     case 'normal clothes':
       if (
         e.startsWith('f') &&
         Math.random() < 0.5 &&
-        (r.push(ar(Fi, r)), Math.random() < 0.2 && r.push(ar(Hi, r))),
+        (r.push(getWeightedChoice(Fi, r)), Math.random() < 0.2 && r.push(getWeightedChoice(Hi, r))),
         e.startsWith('f') &&
         Math.random() < 0.2
       ) {
         var d = Math.random() < 0.5,
-          u = ar(tr, r),
-          h = ar(zi, r)
+          u = getWeightedChoice(tr, r),
+          h = getWeightedChoice(zi, r)
         r.push(d ? ''.concat(u, ' ').concat(h) : h)
       } else {
         if (Math.random() < 0.85) {
           var p = Math.random() < 0.5,
-            m = ar(tr, r),
-            g = ar(Ni, r)
+            m = getWeightedChoice(tr, r),
+            g = getWeightedChoice(Ni, r)
           r.push(p ? ''.concat(m, ' ').concat(g) : g)
         }
         if (!a) {
           if (Math.random() < 0.85 && 'portrait' !== t) {
             var f = Math.random() < 0.5,
-              v = ar(tr, r),
-              x = ar(Oi, r)
+              v = getWeightedChoice(tr, r),
+              x = getWeightedChoice(Oi, r)
             r.push(f ? ''.concat(v, ' ').concat(x) : x)
           }
           if (Math.random() < 0.6 && ('full body' === t || void 0 === t)) {
             var y = Math.random() < 0.5,
-              b = ar(tr, r),
-              w = ar(Wi, r)
+              b = getWeightedChoice(tr, r),
+              w = getWeightedChoice(Wi, r)
             r.push(y ? ''.concat(b, ' ').concat(w) : w)
           }
         }
       }
   }
   Math.random() < 0.6 &&
-    r.push(ar(qi, r)),
+    r.push(getWeightedChoice(qi, r)),
     Math.random() < (n && 1 === i ? 1 : 0.4) &&
     r.push(
-      ar(
+      getWeightedChoice(
         [...Ji].concat(
           n ? [...ir.nSM, ...ir.nSA, ...ir.nSP] : []
         ),
@@ -487,7 +489,7 @@ function or(e, t, n, i) {
       }))
     }))
   var j = 0
-  j = ar(
+  j = getWeightedChoice(
     1 === i ? [
       [0,
         10],
@@ -524,7 +526,7 @@ function or(e, t, n, i) {
     ],
     r
   )
-  for (var k = 0; k < j; k++) r.push(ar([...Ui, ...(n ? ir.nEx : [])], r))
+  for (var k = 0; k < j; k++) r.push(getWeightedChoice([...Ui, ...(n ? ir.nEx : [])], r))
   return a &&
     r.filter((function (e) {
       return !e.includes('legwear')
