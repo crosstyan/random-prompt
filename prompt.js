@@ -1,7 +1,8 @@
-import * as tags from "./tags.js"
+import {
+  vi, xi, yi, bi, wi, ji, ki, Si, Ii, Ci, Zi, Mi, Pi, Di, Li, Ti, Ei, Ai, Ri,
+  zi, Fi, Hi, Ni, Oi, Wi, Yi, Vi, Bi, Ui, qi, _i, Xi, Gi, Ji, Ki, Qi, $i, er, tr
+} from './tags.js'
 import { ir } from "./tags_nsfw.js"
-
-Object.assign(globalThis, tags)
 
 /**
  * 
@@ -9,10 +10,11 @@ Object.assign(globalThis, tags)
  * Generating a number between 0 and 1
  * Scaling and offsetting to fit the bounds
  * Flooring and returning the result
+ * @param {number} e This is the maximum bound for the random number generation
+ * @param {number} t This is the minimum bound for the random number generation. It is optional. If it is not provided, it defaults to 0
+ * @returns {number}
  */
-function rr(e) {
-  var t = arguments.length > 1 &&
-    void 0 !== arguments[1] ? arguments[1] : 0
+function rr(e, t = 0) {
   return Math.floor(Math.random() * (e - t)) + t
 }
 
@@ -237,6 +239,8 @@ export default function randomPrompt(e) {
 
 /**
  * `ar` in minified code
+ * @param {[string, number][] | [number, number][] | [string, number, string[]][]} e
+ * @param {string[]} t tags
  */
 function getWeightedChoice(e, t) {
   var n = e.filter(
@@ -294,6 +298,13 @@ function getWeightedChoice(e, t) {
   throw new Error('getWeightedChoice: should not reach here')
 }
 
+/**
+ * @param {"f" | "fu" | "m" | "o"} e a string that represent the gender (?)
+ * @param {string} t camera angle
+ * @param {boolean} n NSFW
+ * @param {1 | 2} i a number/enum that I have no idea what it is
+ * @returns 
+ */
 function or(e, t, n, i) {
   var r = []
   Math.random() < 0.1 &&
