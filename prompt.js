@@ -291,11 +291,11 @@ function ar(e, t) {
   throw new Error('getWeightedChoice: should not reach here')
 }
 
-
 function or(e, t, n, i) {
   var r = []
   Math.random() < 0.1 &&
     r.push(ar(ki, r))
+  var lr = new Set(['mermaid', 'centaur', 'lamia'])
   var a = r.some((function (e) {
     return lr.has(e)
   }))
