@@ -8,6 +8,7 @@ import {
 import { nsfw } from "./tags_nsfw.js"
 
 /**
+ * `rr` in minified code
  * 
  * Taking a min and max bound
  * Generating a number between 0 and 1
@@ -17,7 +18,7 @@ import { nsfw } from "./tags_nsfw.js"
  * @param {number} t This is the minimum bound for the random number generation. It is optional. If it is not provided, it defaults to 0
  * @returns {number}
  */
-function rr(e, t = 0) {
+function randomNum(e, t = 0) {
   return Math.floor(Math.random() * (e - t)) + t
 }
 
@@ -195,7 +196,7 @@ export default function randomPrompt(e) {
   }
   if (Math.random() < 0.8) {
     var x = getWeightedChoice(backgroundColor, t)
-    if (t.push(x), 'scenery' === x && Math.random() < 0.5) for (var y = rr(3, 1), b = 0; b < y; b++) t.push(getWeightedChoice(backgroundObjects, t))
+    if (t.push(x), 'scenery' === x && Math.random() < 0.5) for (var y = randomNum(3, 1), b = 0; b < y; b++) t.push(getWeightedChoice(backgroundObjects, t))
   }
   Math.random() < 0.3 &&
     t.push(getWeightedChoice(cameraPerspective, t)),
@@ -212,23 +213,23 @@ export default function randomPrompt(e) {
       Math.random() < 0.2 &&
       (k = !0, t.push(nsfw.fu)),
       // TODO: review
-      (j = t).push(...or(k ? 'fu' : 'f', p, n, i))
+      (j = t).push(...characterFeatures(k ? 'fu' : 'f', p, n, i))
   }
   for (var S = 0; S < d; S++) {
     var I;
-    (I = t).push(...or('m', p, n, i))
+    (I = t).push(...characterFeatures('m', p, n, i))
   }
   for (var C = 0; C < u; C++) {
     var Z;
-    (Z = t).push(...or('o', p, n, i))
+    (Z = t).push(...characterFeatures('o', p, n, i))
   }
   if (Math.random() < 0.2) {
-    var M = rr(4)
+    var M = randomNum(4)
     2 === i &&
-      (M = rr(3))
+      (M = randomNum(3))
     for (var P = 0; P < M; P++) t.push(getWeightedChoice(accessories, t))
   }
-  if (Math.random() < 0.25) for (var D = rr(3, 1), L = 0; L < D; L++) t.push(getWeightedChoice(effects, t))
+  if (Math.random() < 0.25) for (var D = randomNum(3, 1), L = 0; L < D; L++) t.push(getWeightedChoice(effects, t))
   Math.random() < 0.2 &&
     t.push(getWeightedChoice(years, t)),
     Math.random() < 0.1 &&
@@ -276,7 +277,7 @@ function getWeightedChoice(e, t) {
       if (a) throw o
     }
   }
-  var c = rr(i, 1),
+  var c = randomNum(i, 1),
     d = 0,
     u = !0,
     h = !1,
@@ -302,13 +303,14 @@ function getWeightedChoice(e, t) {
 }
 
 /**
+ * `or` in minified code
+ * 
  * @param {"f" | "fu" | "m" | "o"} e a string that represent the gender (?)
  * @param {string} t camera angle
  * @param {boolean} n NSFW
  * @param {1 | 2} i a number/enum that I have no idea what it is
- * @returns 
  */
-function or(e, t, n, i) {
+function characterFeatures(e, t, n, i) {
   var r = []
   Math.random() < 0.1 &&
     r.push(getWeightedChoice(animalFeatures, r))
