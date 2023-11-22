@@ -1,5 +1,5 @@
-export const ir = {
-  "p": [
+export const nsfw = {
+  "pussy": [
     [
       "uncensored, pussy",
       5
@@ -9,7 +9,7 @@ export const ir = {
       2
     ]
   ],
-  "mp": [
+  "penis": [
     [
       "uncensored, penis",
       5
@@ -27,7 +27,7 @@ export const ir = {
       5
     ]
   ],
-  "n": [
+  "undressing": [
     [
       "clothing aside",
       5
@@ -93,7 +93,7 @@ export const ir = {
       5
     ]
   ],
-  "u": [
+  "underwear": [
     [
       "bandaid on pussy",
       5
@@ -175,7 +175,7 @@ export const ir = {
       5
     ]
   ],
-  "nk": [
+  "naked": [
     [
       "naked apron",
       5
@@ -253,7 +253,7 @@ export const ir = {
       25
     ]
   ],
-  "bd": [
+  "bdsm": [
     [
       "blindfold",
       5
@@ -275,7 +275,7 @@ export const ir = {
       5
     ]
   ],
-  "nEx": [
+  "nudeExtra": [
     [
       "pubic hair",
       25
@@ -333,7 +333,7 @@ export const ir = {
       25
     ]
   ],
-  "nSM": [
+  "action": [
     [
       "adjusting panties",
       15
@@ -582,7 +582,7 @@ export const ir = {
       15
     ]
   ],
-  "nSA": [
+  "analForeplay": [
     [
       "anal fingering",
       15
@@ -620,7 +620,7 @@ export const ir = {
       15
     ]
   ],
-  "nSP": [
+  "pussyForeplay": [
     [
       "spread pussy",
       15
@@ -638,7 +638,7 @@ export const ir = {
       15
     ]
   ],
-  "nPM": [
+  "footForeplay": [
     [
       "footjob",
       5
@@ -706,7 +706,7 @@ export const ir = {
       5
     ]
   ],
-  "nPA": [
+  "analSex": [
     [
       "anal",
       4
@@ -756,7 +756,7 @@ export const ir = {
       4
     ]
   ],
-  "nPP": [
+  "sex": [
     [
       "sex",
       5
@@ -818,7 +818,7 @@ export const ir = {
       5
     ]
   ],
-  "sMod": [
+  "sexMod": [
     [
       "clothed sex",
       5
@@ -852,7 +852,7 @@ export const ir = {
       5
     ]
   ],
-  "sActMod": [
+  "sexActionMode": [
     [
       "bondage",
       5
@@ -918,7 +918,7 @@ export const ir = {
       5
     ]
   ],
-  "sT": [
+  "sexAccessories": [
     [
       "dildo",
       5

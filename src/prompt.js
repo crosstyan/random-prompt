@@ -5,7 +5,7 @@ import {
   footwears, uniform, athletic, swimsuits, clothesAccessories, expression, years, backgroundObjects, accessories,
   action, effects, eyeColors, hairColors, hairColorExtra, color
 } from './tags.js'
-import { ir } from "./tags_nsfw.js"
+import { nsfw } from "./tags_nsfw.js"
 
 /**
  * 
@@ -165,33 +165,33 @@ export default function randomPrompt(e) {
     var g = !1
     c >= 2 &&
       0 === d &&
-      (Math.random() < 0.7 ? t.push(ir.yu) : (t.push(ir.fu), g = !0)),
+      (Math.random() < 0.7 ? t.push(nsfw.yu) : (t.push(nsfw.fu), g = !0)),
       d >= 2 &&
       0 === c &&
-      t.push(ir.ya)
+      t.push(nsfw.ya)
     var f = !1
-    if (c > 0 && d > 0 && Math.random() < 0.2 && (t.push(ir.fu), f = !0), i >= 2) {
+    if (c > 0 && d > 0 && Math.random() < 0.2 && (t.push(nsfw.fu), f = !0), i >= 2) {
       m = !0
-      var v = [...ir.nPM];
+      var v = [...nsfw.footForeplay];
       (c > 0 && d > 0 || g) &&
-        (v = [...v, ...ir.nPP]),
+        (v = [...v, ...nsfw.sex]),
         (d > 0 || g) &&
-        (v = [...v, ir.nPA]),
+        (v = [...v, nsfw.analSex]),
         g &&
-        t.push(ir.fwf),
+        t.push(nsfw.fwf),
         f &&
-        t.push(ir.fwm),
+        t.push(nsfw.fwm),
         t.push(getWeightedChoice(v, t)),
         Math.random() < 0.6 &&
-        t.push(getWeightedChoice(ir.sMod, t))
+        t.push(getWeightedChoice(nsfw.sexMod, t))
     }
     Math.random() < 0.4 &&
-      t.push(getWeightedChoice(ir.sActMod, t)),
+      t.push(getWeightedChoice(nsfw.sexActionMode, t)),
       Math.random() < 0.05 &&
-      t.push(getWeightedChoice(ir.bd, t)),
+      t.push(getWeightedChoice(nsfw.bdsm, t)),
       Math.random() < 0.05 &&
-      t.push(getWeightedChoice(ir.sT, t)),
-      t.unshift(ir.nw)
+      t.push(getWeightedChoice(nsfw.sexAccessories, t)),
+      t.unshift(nsfw.nw)
   }
   if (Math.random() < 0.8) {
     var x = getWeightedChoice(backgroundColor, t)
@@ -210,7 +210,7 @@ export default function randomPrompt(e) {
       1 === c &&
       1 === i &&
       Math.random() < 0.2 &&
-      (k = !0, t.push(ir.fu)),
+      (k = !0, t.push(nsfw.fu)),
       // TODO: review
       (j = t).push(...or(k ? 'fu' : 'f', p, n, i))
   }
@@ -409,25 +409,25 @@ function or(e, t, n, i) {
       5
     ]], r)) {
       case 'n':
-        r.push(getWeightedChoice(ir.n, r))
+        r.push(getWeightedChoice(nsfw.undressing, r))
         break
       case 'u':
-        r.push(getWeightedChoice(ir.u, r)),
+        r.push(getWeightedChoice(nsfw.underwear, r)),
           Math.random() < 0.5 &&
           (c = void 0)
         break
       case 'nk':
-        r.push(getWeightedChoice(ir.nk, r)),
+        r.push(getWeightedChoice(nsfw.naked, r)),
           c = void 0
     }
     'portrait' !== t &&
       'upper body' !== t &&
       (
         'f' === e &&
-          Math.random() < 0.8 ? r.push(getWeightedChoice(ir.p, r)) : 'm' === e &&
-            Math.random() < 0.8 ? r.push(getWeightedChoice(ir.mp, r)) : 'fu' === e &&
+          Math.random() < 0.8 ? r.push(getWeightedChoice(nsfw.pussy, r)) : 'm' === e &&
+            Math.random() < 0.8 ? r.push(getWeightedChoice(nsfw.penis, r)) : 'fu' === e &&
             Math.random() < 1 &&
-        (r.push(getWeightedChoice(ir.mp, r)), Math.random() < 0.5 && r.push(getWeightedChoice(ir.p, r)))
+        (r.push(getWeightedChoice(nsfw.penis, r)), Math.random() < 0.5 && r.push(getWeightedChoice(nsfw.pussy, r)))
       )
   }
   switch (c) {
@@ -481,7 +481,7 @@ function or(e, t, n, i) {
     r.push(
       getWeightedChoice(
         [...action].concat(
-          n ? [...ir.nSM, ...ir.nSA, ...ir.nSP] : []
+          n ? [...nsfw.action, ...nsfw.analForeplay, ...nsfw.pussyForeplay] : []
         ),
         r
       )
@@ -540,7 +540,7 @@ function or(e, t, n, i) {
     ],
     r
   )
-  for (var k = 0; k < j; k++) r.push(getWeightedChoice([...clothesAccessories, ...(n ? ir.nEx : [])], r))
+  for (var k = 0; k < j; k++) r.push(getWeightedChoice([...clothesAccessories, ...(n ? nsfw.nudeExtra : [])], r))
   return a &&
     r.filter((function (e) {
       return !e.includes('legwear')
