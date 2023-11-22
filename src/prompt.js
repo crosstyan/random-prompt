@@ -2,7 +2,7 @@ import {
   cameraPerspective, cameraFocus, backgroundTheme, backgroundColor, cameraAngle, artStyle, animalFeatures,
   sinkColor, eyeCharacteristics, eyesExpression, hairLength, backHairStyle, hairFeatures, foreheadStyle,
   breastsSize, bodyFeatures, headWears, hairOrnaments, hatOrnaments, dress, socks, legwear, uppers, bottoms,
-  footwears, uniform, athletic, swimsuits, clothesAccessories, expression, years, backgroundObjects, accessories,
+  footwears, uniform, athletic as bodysuit, swimsuits, clothesAccessories, expression, years, backgroundObjects, accessories,
   action, effects, eyeColors, hairColors, hairColorExtra, color
 } from './tags.js'
 import { nsfw } from "./tags_nsfw.js"
@@ -440,7 +440,7 @@ function characterFeatures(e, t, n, i) {
       r.push(getWeightedChoice(swimsuits, r))
       break
     case 'bodysuit':
-      r.push(getWeightedChoice(athletic, r))
+      r.push(getWeightedChoice(bodysuit, r))
       break
     case 'normal clothes':
       if (
