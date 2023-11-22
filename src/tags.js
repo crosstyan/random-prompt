@@ -1,5 +1,5 @@
 // camera perspective
-export const vi = [
+export const cameraPerspective = [
   ['dutch angle',
   5],
   [
@@ -25,7 +25,7 @@ export const vi = [
 ]
 
 // camera focus
-export const xi = [
+export const cameraFocus = [
   ['solo focus',
   5],
   [
@@ -70,7 +70,7 @@ export const xi = [
 ]
 
 // background theme
-export const yi = [
+export const backgroundTheme = [
   ['landscape',
   5],
   [
@@ -92,7 +92,7 @@ export const yi = [
 ]
 
 // background color
-export const bi = [
+export const backgroundColor = [
   ['white background',
   5],
   [
@@ -281,8 +281,8 @@ export const bi = [
   ]
 ]
 
-// camera angle/
-export const wi = [
+// camera angle
+export const cameraAngle = [
   ['portrait',
   4],
   [
@@ -308,7 +308,7 @@ export const wi = [
 ]
 
 // art style/medium
-export const ji = [
+export const artStyle = [
   ['ligne claire',
   5],
   [
@@ -402,7 +402,7 @@ export const ji = [
 ]
 
 // animal ears
-export const ki = [
+export const animalFeatures = [
   ['bat ears, bat wings',
   5],
   [
@@ -548,7 +548,7 @@ export const ki = [
 ]
 
 // skin color
-export const Si = [
+export const sinkColor = [
   ['dark skin',
   200],
   [
@@ -606,7 +606,7 @@ export const Si = [
 ]
 
 // eyes characteristics
-export const Ii = [
+export const eyeCharacteristics = [
   ['heterochromia',
   5],
   [
@@ -652,7 +652,7 @@ export const Ii = [
 ]
 
 // additional eye characteristics
-export const Ci = [
+export const eyesExpression = [
   ['crazy eyes',
   2],
   [
@@ -690,7 +690,7 @@ export const Ci = [
 ]
 
 // hair length
-export const Zi = [
+export const hairLength = [
   ['very short hair',
   5],
   [
@@ -720,7 +720,7 @@ export const Zi = [
 ]
 
 // back hair style
-export const  Mi = [
+export const  backHairStyle = [
   ['braid',
   5],
   [
@@ -858,7 +858,7 @@ export const  Mi = [
 ]
 
 // hair features
-export const Pi = [
+export const hairFeatures = [
   ['drill hair',
   5],
   [
@@ -904,7 +904,7 @@ export const Pi = [
 ]
 
 // bangs/forehead
-export const Di = [
+export const foreheadStyle = [
   ['arched bangs',
   5],
   [
@@ -1002,7 +1002,7 @@ export const Di = [
 ]
 
 // breasts size
-export const Li = [
+export const breastsSize = [
   ['flat chest',
   5],
   [
@@ -1032,7 +1032,7 @@ export const Li = [
 ]
 
 // body features
-export const Ti = [
+export const bodyFeatures = [
   ['forehead',
   5],
   [
@@ -1186,7 +1186,7 @@ export const Ti = [
 ]
 
 // hat/cap
-export const Ei = [
+export const headWears = [
   ['baseball cap',
   5],
   [
@@ -1380,7 +1380,7 @@ export const Ei = [
 ]
 
 // hair accessories
-export const Ai = [
+export const hairOrnaments = [
   ['hair ribbon',
   5],
   [
@@ -1409,8 +1409,8 @@ export const Ai = [
   ]
 ]
 
-// hair ornaments
-export const Ri = [
+// hat ornaments
+export const hatOrnaments = [
   ['hat bow',
   5],
   [
@@ -1432,7 +1432,7 @@ export const Ri = [
 ]
 
 // dress
-export const zi = [
+export const dress = [
   ['coat dress',
   5],
   [
@@ -1582,7 +1582,7 @@ export const zi = [
 ]
 
 // socks
-export const Fi = [
+export const socks = [
   ['socks',
   5],
   [
@@ -1616,7 +1616,7 @@ export const Fi = [
 ]
 
 // legwear
-export const Hi = [
+export const legwear = [
   ['fishnet legwear',
   5],
   [
@@ -1662,7 +1662,7 @@ export const Hi = [
 ]
 
 // upper/top
-export const Ni = [
+export const uppers = [
   ['blouse',
   5],
   [
@@ -1920,7 +1920,7 @@ export const Ni = [
 ]
 
 // under/bottom
-export const Oi = [
+export const bottoms = [
   ['bloomers',
   5],
   [
@@ -2078,7 +2078,7 @@ export const Oi = [
 ]
 
 // shoes/boot/footwears
-export const Wi = [
+export const footwears = [
   ['boots',
   5],
   [
@@ -2216,7 +2216,7 @@ export const Wi = [
 ]
 
 // cosplay/uniform
-export const Yi = [
+export const uniform = [
   ['armor',
   5],
   [
@@ -2434,7 +2434,7 @@ export const Yi = [
 ]
 
 // athletic wear
-export const Vi = [
+export const athletic = [
   ['bikesuit',
   5],
   [
@@ -2480,7 +2480,7 @@ export const Vi = [
 ]
 
 // swimsuits
-export const Bi = [
+export const swimsuits = [
   ['swimsuit',
   5],
   [
@@ -2566,7 +2566,7 @@ export const Bi = [
 ]
 
 // clothes
-export const Ui = [
+export const clothesAccessories = [
   ['apron',
   5],
   [
@@ -3952,7 +3952,7 @@ export const Ui = [
 ]
 
 // expressions
-export const qi = [
+export const expression = [
   ['wince',
   5],
   [
@@ -4386,7 +4386,7 @@ export const qi = [
 ]
 
 // years
-export const _i = [
+export const years = [
   ['year 2005',
   5],
   [
@@ -4468,7 +4468,7 @@ export const _i = [
 ]
 
 // place/scene
-export const Xi = [
+export const backgroundObjects = [
   ['wooden floor',
   5],
   [
@@ -4958,7 +4958,7 @@ export const Xi = [
 ]
 
 // accessories
-export const Gi = [
+export const accessories = [
   ['strawberry',
   5],
   [
@@ -6068,7 +6068,7 @@ export const Gi = [
 ]
 
 // action
-export const Ji = [
+export const action = [
   ['waving',
   5],
   [
@@ -6838,7 +6838,7 @@ export const Ji = [
 ]
 
 // effects
-export const Ki = [
+export const effects = [
   ['sparkle',
   5],
   [
@@ -7320,7 +7320,7 @@ export const Ki = [
 ]
 
 // eye colors
-export const Qi = [
+export const eyeColors = [
   ['aqua eyes',
   5],
   [
@@ -7374,7 +7374,7 @@ export const Qi = [
 ]
 
 // hair colors
-export const $i = [
+export const hairColors = [
   ['aqua hair',
   5],
   [
@@ -7448,7 +7448,7 @@ export const $i = [
 ]
 
 // hair colors feature
-export const er = [
+export const hairColorExtra = [
   ['multicolored hair',
   5],
   [
@@ -7478,7 +7478,7 @@ export const er = [
 ]
 
 // color
-export const tr = [
+export const color = [
   ['aqua',
   5],
   [

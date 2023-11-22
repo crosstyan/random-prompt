@@ -1,6 +1,9 @@
 import {
-  vi, xi, yi, bi, wi, ji, ki, Si, Ii, Ci, Zi, Mi, Pi, Di, Li, Ti, Ei, Ai, Ri,
-  zi, Fi, Hi, Ni, Oi, Wi, Yi, Vi, Bi, Ui, qi, _i, Xi, Gi, Ji, Ki, Qi, $i, er, tr
+  cameraPerspective, cameraFocus, backgroundTheme, backgroundColor, cameraAngle, artStyle, animalFeatures,
+  sinkColor, eyeCharacteristics, eyesExpression, hairLength, backHairStyle, hairFeatures, foreheadStyle,
+  breastsSize, bodyFeatures, headWears, hairOrnaments, hatOrnaments, dress, socks, legwear, uppers, bottoms,
+  footwears, uniform, athletic, swimsuits, clothesAccessories, expression, years, backgroundObjects, accessories,
+  action, effects, eyeColors, hairColors, hairColorExtra, color
 } from './tags.js'
 import { ir } from "./tags_nsfw.js"
 
@@ -54,8 +57,8 @@ export default function randomPrompt(e) {
   ]], t)), 0 === i) {
     t.push('no humans'),
       Math.random() < 0.3 &&
-      t.push(getWeightedChoice(ji, t)),
-      t.push(getWeightedChoice(yi, t))
+      t.push(getWeightedChoice(artStyle, t)),
+      t.push(getWeightedChoice(backgroundTheme, t))
     for (var r = getWeightedChoice([[2,
       15],
     [
@@ -69,7 +72,7 @@ export default function randomPrompt(e) {
     [
       5,
       5
-    ]], t), a = 0; a < r; a++) t.push(getWeightedChoice(Xi, t))
+    ]], t), a = 0; a < r; a++) t.push(getWeightedChoice(backgroundObjects, t))
     var o = getWeightedChoice([[0,
       15],
     [
@@ -94,11 +97,11 @@ export default function randomPrompt(e) {
     ]], t);
     (o -= i) < 0 &&
       (o = 0)
-    for (var s = 0; s < o; s++) t.push(getWeightedChoice(Gi, t))
+    for (var s = 0; s < o; s++) t.push(getWeightedChoice(accessories, t))
     return t.join(', ')
   }
   Math.random() < 0.3 &&
-    t.push(getWeightedChoice(ji, t))
+    t.push(getWeightedChoice(artStyle, t))
   for (var c = 0, d = 0, u = 0, h = 0; h < i; h++) {
     getWeightedChoice([['m',
       30],
@@ -191,14 +194,14 @@ export default function randomPrompt(e) {
       t.unshift(ir.nw)
   }
   if (Math.random() < 0.8) {
-    var x = getWeightedChoice(bi, t)
-    if (t.push(x), 'scenery' === x && Math.random() < 0.5) for (var y = rr(3, 1), b = 0; b < y; b++) t.push(getWeightedChoice(Xi, t))
+    var x = getWeightedChoice(backgroundColor, t)
+    if (t.push(x), 'scenery' === x && Math.random() < 0.5) for (var y = rr(3, 1), b = 0; b < y; b++) t.push(getWeightedChoice(backgroundObjects, t))
   }
   Math.random() < 0.3 &&
-    t.push(getWeightedChoice(vi, t)),
+    t.push(getWeightedChoice(cameraPerspective, t)),
     Math.random() < 0.7 &&
     !m &&
-    (p = getWeightedChoice(wi, t)) &&
+    (p = getWeightedChoice(cameraAngle, t)) &&
     t.push(p)
   for (var w = 0; w < c; w++) {
     var j,
@@ -223,13 +226,13 @@ export default function randomPrompt(e) {
     var M = rr(4)
     2 === i &&
       (M = rr(3))
-    for (var P = 0; P < M; P++) t.push(getWeightedChoice(Gi, t))
+    for (var P = 0; P < M; P++) t.push(getWeightedChoice(accessories, t))
   }
-  if (Math.random() < 0.25) for (var D = rr(3, 1), L = 0; L < D; L++) t.push(getWeightedChoice(Ki, t))
+  if (Math.random() < 0.25) for (var D = rr(3, 1), L = 0; L < D; L++) t.push(getWeightedChoice(effects, t))
   Math.random() < 0.2 &&
-    t.push(getWeightedChoice(_i, t)),
+    t.push(getWeightedChoice(years, t)),
     Math.random() < 0.1 &&
-    t.push(getWeightedChoice(xi, t))
+    t.push(getWeightedChoice(cameraFocus, t))
   var T = new Set(t.join(', ').split(', '))
   t = [...T]
   for (var E = 0; E < t.length; E++) Math.random() < 0.02 &&
@@ -308,34 +311,34 @@ function getWeightedChoice(e, t) {
 function or(e, t, n, i) {
   var r = []
   Math.random() < 0.1 &&
-    r.push(getWeightedChoice(ki, r))
+    r.push(getWeightedChoice(animalFeatures, r))
   var lr = new Set(['mermaid', 'centaur', 'lamia'])
   var a = r.some((function (e) {
     return lr.has(e)
   }))
   Math.random() < 0.4 &&
-    r.push(getWeightedChoice(Si, r)),
+    r.push(getWeightedChoice(sinkColor, r)),
     Math.random() < 0.8 &&
-    r.push(getWeightedChoice(Qi, r)),
+    r.push(getWeightedChoice(eyeColors, r)),
     Math.random() < 0.1 &&
-    r.push(getWeightedChoice(Ii, r)),
+    r.push(getWeightedChoice(eyeCharacteristics, r)),
     Math.random() < 0.2 &&
-    r.push(getWeightedChoice(Ci, r)),
+    r.push(getWeightedChoice(eyesExpression, r)),
     Math.random() < 0.8 &&
-    r.push(getWeightedChoice(Zi, r)),
+    r.push(getWeightedChoice(hairLength, r)),
     Math.random() < 0.5 &&
-    r.push(getWeightedChoice(Mi, r)),
+    r.push(getWeightedChoice(backHairStyle, r)),
     Math.random() < 0.7 &&
-    r.push(getWeightedChoice($i, r)),
+    r.push(getWeightedChoice(hairColors, r)),
     Math.random() < 0.1 &&
-    r.push(getWeightedChoice(er, r), getWeightedChoice($i, r)),
+    r.push(getWeightedChoice(hairColorExtra, r), getWeightedChoice(hairColors, r)),
     Math.random() < 0.1 &&
-    r.push(getWeightedChoice(Pi, r)),
+    r.push(getWeightedChoice(hairFeatures, r)),
     Math.random() < 0.2 &&
-    r.push(getWeightedChoice(Di, r)),
+    r.push(getWeightedChoice(foreheadStyle, r)),
     e.startsWith('f') &&
     Math.random() < 0.5 &&
-    r.push(getWeightedChoice(Li, r))
+    r.push(getWeightedChoice(breastsSize, r))
   var o = 0
   o = getWeightedChoice(
     1 === i ? [
@@ -374,9 +377,9 @@ function or(e, t, n, i) {
     ],
     r
   )
-  for (var s = 0; s < o; s++) r.push(getWeightedChoice(Ti, r))
-  Math.random() < 0.2 ? (r.push(getWeightedChoice(Ei, r)), Math.random() < 0.2 && r.push(getWeightedChoice(Ri, r))) : Math.random() < 0.3 &&
-    r.push(getWeightedChoice(Ai, r))
+  for (var s = 0; s < o; s++) r.push(getWeightedChoice(bodyFeatures, r))
+  Math.random() < 0.2 ? (r.push(getWeightedChoice(headWears, r)), Math.random() < 0.2 && r.push(getWeightedChoice(hatOrnaments, r))) : Math.random() < 0.3 &&
+    r.push(getWeightedChoice(hairOrnaments, r))
   var c = getWeightedChoice(
     [['uniform',
       10],
@@ -429,55 +432,55 @@ function or(e, t, n, i) {
   }
   switch (c) {
     case 'uniform':
-      r.push(getWeightedChoice(Yi, r))
+      r.push(getWeightedChoice(uniform, r))
       break
     case 'swimsuit':
-      r.push(getWeightedChoice(Bi, r))
+      r.push(getWeightedChoice(swimsuits, r))
       break
     case 'bodysuit':
-      r.push(getWeightedChoice(Vi, r))
+      r.push(getWeightedChoice(athletic, r))
       break
     case 'normal clothes':
       if (
         e.startsWith('f') &&
         Math.random() < 0.5 &&
-        (r.push(getWeightedChoice(Fi, r)), Math.random() < 0.2 && r.push(getWeightedChoice(Hi, r))),
+        (r.push(getWeightedChoice(socks, r)), Math.random() < 0.2 && r.push(getWeightedChoice(legwear, r))),
         e.startsWith('f') &&
         Math.random() < 0.2
       ) {
         var d = Math.random() < 0.5,
-          u = getWeightedChoice(tr, r),
-          h = getWeightedChoice(zi, r)
+          u = getWeightedChoice(color, r),
+          h = getWeightedChoice(dress, r)
         r.push(d ? ''.concat(u, ' ').concat(h) : h)
       } else {
         if (Math.random() < 0.85) {
           var p = Math.random() < 0.5,
-            m = getWeightedChoice(tr, r),
-            g = getWeightedChoice(Ni, r)
+            m = getWeightedChoice(color, r),
+            g = getWeightedChoice(uppers, r)
           r.push(p ? ''.concat(m, ' ').concat(g) : g)
         }
         if (!a) {
           if (Math.random() < 0.85 && 'portrait' !== t) {
             var f = Math.random() < 0.5,
-              v = getWeightedChoice(tr, r),
-              x = getWeightedChoice(Oi, r)
+              v = getWeightedChoice(color, r),
+              x = getWeightedChoice(bottoms, r)
             r.push(f ? ''.concat(v, ' ').concat(x) : x)
           }
           if (Math.random() < 0.6 && ('full body' === t || void 0 === t)) {
             var y = Math.random() < 0.5,
-              b = getWeightedChoice(tr, r),
-              w = getWeightedChoice(Wi, r)
+              b = getWeightedChoice(color, r),
+              w = getWeightedChoice(footwears, r)
             r.push(y ? ''.concat(b, ' ').concat(w) : w)
           }
         }
       }
   }
   Math.random() < 0.6 &&
-    r.push(getWeightedChoice(qi, r)),
+    r.push(getWeightedChoice(expression, r)),
     Math.random() < (n && 1 === i ? 1 : 0.4) &&
     r.push(
       getWeightedChoice(
-        [...Ji].concat(
+        [...action].concat(
           n ? [...ir.nSM, ...ir.nSA, ...ir.nSP] : []
         ),
         r
@@ -495,7 +498,7 @@ function or(e, t, n, i) {
       }))
     ) &&
     r.filter((function (e) {
-      return !Qi.some((function (t) {
+      return !eyeColors.some((function (t) {
         return e === t[0]
       }))
     }))
@@ -537,7 +540,7 @@ function or(e, t, n, i) {
     ],
     r
   )
-  for (var k = 0; k < j; k++) r.push(getWeightedChoice([...Ui, ...(n ? ir.nEx : [])], r))
+  for (var k = 0; k < j; k++) r.push(getWeightedChoice([...clothesAccessories, ...(n ? ir.nEx : [])], r))
   return a &&
     r.filter((function (e) {
       return !e.includes('legwear')
