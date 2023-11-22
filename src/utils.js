@@ -1,4 +1,3 @@
-
 /**
  * The cloneIterable function is designed to create a shallow copy of various
  * types of iterable objects, in other words, it duplicates the iterable
@@ -7,7 +6,6 @@
  * Well I guess it just a spread operator in ES6
  */
 export function a(e) {
-
   /**
    * i.Z
    */
