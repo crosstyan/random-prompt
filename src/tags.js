@@ -2434,7 +2434,7 @@ export const uniform = [
 ]
 
 // athletic wear
-export const athletic = [
+export const bodysuit = [
   ['bikesuit',
   5],
   [

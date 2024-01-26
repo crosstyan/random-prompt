@@ -2,7 +2,7 @@ import {
   cameraPerspective, cameraFocus, backgroundTheme, backgroundColor, cameraAngle, artStyle, animalFeatures,
   sinkColor, eyeCharacteristics, eyesExpression, hairLength, backHairStyle, hairFeatures, foreheadStyle,
   breastsSize, bodyFeatures, headWears, hairOrnaments, hatOrnaments, dress, socks, legwear, uppers, bottoms,
-  footwears, uniform, athletic as bodysuit, swimsuits, clothesAccessories, expression, years, backgroundObjects, accessories,
+  footwears, uniform, bodysuit, swimsuits, clothesAccessories, expression, years, backgroundObjects, accessories,
   action, effects, eyeColors, hairColors, hairColorExtra, color
 } from './tags.js'
 import { nsfw } from "./tags_nsfw.js"
